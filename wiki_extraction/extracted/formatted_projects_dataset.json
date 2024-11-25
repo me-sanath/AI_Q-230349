@@ -1,0 +1,334 @@
+[
+    {
+        "batch_number": 1,
+        "classification": {
+            "id": "chatcmpl-45f5a90a-c525-4874-be8c-4aa40903e5b3",
+            "object": "chat.completion",
+            "created": 1732458211,
+            "model": "llama3-8b-8192",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "Here is the formatted data in the format of a training dataset for a text classification task:\n\n**Text**: (concatenated text)\n\n\"There are several ways of mounting a Nest application. You can create a web app, a microservice or just a bare Nest standalone application (without any network listeners). The Nest standalone application is a wrapper around the Nest IoC container, which holds all instantiated classes. We can obtain a reference to any existing instance from within any imported module directly using the standalone application object. Thus, you can take advantage of the Nest framework anywhere, including, for example, scripted CRON jobs. You can even build a CLI on top of it.\"\n\n**Labels**: [\"Information\", \"Feature Description\"]\n\n**Tags**: [\"Nest\", \"Standalone\", \"IoC\", \"Angular\", \"CRON\", \"CLI\"]\n\n**Summary**: This text describes how to create a standalone Nest application, its features, and how to use it for tasks such as scripted CRON jobs and building a CLI.\n\n**Sentiment**: Neutral (the text is informative and descriptive, without expressing a clear opinion or emotion)\n\n**Topic**: Programming (the text is about technology and software development)\n\nThis formatted data can be used as a training dataset for a text classification model to classify new texts into categories such as \"Information\", \"Feature Description\", or other relevant categories."
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "queue_time": 0.0016187149999999997,
+                "prompt_tokens": 382,
+                "prompt_time": 0.017263685,
+                "completion_tokens": 275,
+                "completion_time": 0.229166667,
+                "total_tokens": 657,
+                "total_time": 0.246430352
+            },
+            "system_fingerprint": "fp_179b0f92c9",
+            "x_groq": {
+                "id": "req_01jdf8wt9zew38ha9venwfm1vc"
+            }
+        }
+    },
+    {
+        "batch_number": 2,
+        "classification": {
+            "id": "chatcmpl-606b826d-778d-4778-b02e-4caacdb1b3bd",
+            "object": "chat.completion",
+            "created": 1732458212,
+            "model": "llama3-8b-8192",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "Here is the formatted data in a training dataset format:\n\n**Text**: get()\n**Label**: Class or Interface Retrieval\n**Description**: Retrieves an instance of a controller or provider (including guards, filters, and so on) available in the application context.\n\n**Text**: select()\n**Label**: Module Navigation\n**Description**: Navigates through the module's graph to pull out a specific instance of the selected module (used together with strict mode as described above).\n\n**Format**:\n\n* **Text**: The original text snippet\n* **Label**: The classification label for the text snippet (e.g. Class or Interface Retrieval, Module Navigation, etc.)\n* **Description**: A brief description of the text snippet, highlighting its main purpose or functionality\n\nThis formatted data is now ready for training a machine learning model to classify similar text snippets into their respective categories."
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "queue_time": 0.0025681620000000006,
+                "prompt_tokens": 114,
+                "prompt_time": 0.014908778,
+                "completion_tokens": 175,
+                "completion_time": 0.145833333,
+                "total_tokens": 289,
+                "total_time": 0.160742111
+            },
+            "system_fingerprint": "fp_6a6771ae9c",
+            "x_groq": {
+                "id": "req_01jdf8wtwpe33tq1q7b0ddmh9s"
+            }
+        }
+    },
+    {
+        "batch_number": 3,
+        "classification": {
+            "id": "chatcmpl-02d06ed0-5a4c-40a9-ba77-2d819d119bc4",
+            "object": "chat.completion",
+            "created": 1732458212,
+            "model": "llama3-8b-8192",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "Based on the given text, I will format the data into a training dataset. Here are the steps:\n\n**Task:** Classification of text as a training dataset\n\n**Format:**\n\n* **Label**: (binary classification, e.g., label1 or label2)\n* **Text**: The original text\n\n**Classified Text:**\n\nBased on the analysis of the text, I classify it into the following categories:\n\n* **Category:** Node.js-related topic\n* **Subcategory:** Module configuration and usage\n\n**Label:** label1 (or label2, depending on the specific classification task)\n\n**Text**:\n```\nHint In non-strict mode, the root module is selected by default. To select any other module, you need to navigate the modules graph manually, step by step.\n\nKeep in mind that a standalone application does not have any network listeners, so any Nest features related to HTTP (e.g., middleware, interceptors, pipes, guards, etc.) are not available in this context.\n\nFor example, even if you register a global interceptor in your application and then retrieve a controller's instance using the app.get() method, the interceptor will not be executed.\n\nRetrieving providers from dynamic modules\nWhen dealing with dynamic modules, we should supply the same object that represents the registered dynamic module in the application to app.select. For example:\n```\ntype:typescript\n@@filename()\nexport const dynamicConfigModule = ConfigModule.register({ folder: './config' });\n@Module({\n  imports: [dynamicConfigModule],\n})\nexport class AppModule {}\n\nThen you can select that module later on:\ntypescript\n@@filename()\nconst configService = app.select(dynamicConfigModule).get(ConfigService, { strict: true });\n\nTerminating phase\nIf you want the Node application to close after the script finishes (e.g., for a script running CRON jobs), you must call the app.close() method in the end of your bootstrap function like this:\n```\n**Label1** (or alternative label if needed)\n\nThis classification can be used as a starting point for training a machine learning model to categorize Node.js-related text. The label and text can be further processed and refined based on the specific requirements of the classification task."
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "queue_time": 0.0013038229999999956,
+                "prompt_tokens": 299,
+                "prompt_time": 0.057203517,
+                "completion_tokens": 447,
+                "completion_time": 0.3725,
+                "total_tokens": 746,
+                "total_time": 0.429703517
+            },
+            "system_fingerprint": "fp_6a6771ae9c",
+            "x_groq": {
+                "id": "req_01jdf8wvcne5eby1agsxtj54k3"
+            }
+        }
+    },
+    {
+        "batch_number": 4,
+        "classification": {
+            "id": "chatcmpl-425c3dd0-7e96-4cbd-a7db-9b3d17794de6",
+            "object": "chat.completion",
+            "created": 1732458213,
+            "model": "llama3-8b-8192",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "Here is the formatted data to prepare for training:\n\n**Dataset: NestJS Documentation**\n\n**Class:** Classifying document type (Chapter, Example, Definition, Library, etc.)\n\n**Text:**\n\n1. ```\n@@filename()\nasync function bootstrap() {\n  const app = await NestFactory.createApplicationContext(AppModule);\n  // application logic...\n  await app.close();\n}\nbootstrap();\n```\n**Tagged:** Code Snippet, Example\n\n2. And as mentioned in the Lifecycle events chapter, that will trigger lifecycle hooks.\n**Tagged:** Definition, Lifecycle Events\n\n3. A working example is available here.\n**Tagged:** Example, Link\n\n4. Libraries\n**Tagged:** Chapter, NestJS\n\n5. Many applications need to solve the same general problems, or re-use a modular component in several different contexts. Nest has a few ways of addressing this, but each works at a different level to solve the problem in a way that helps meet different architectural and organizational objectives.\n**Tagged:** Definition, NestJS\n\n6. Nest modules are useful for providing an execution context that enables sharing components within a single application. Modules can also be packaged with npm to create a reusable library that can be installed in different projects. This can be an effective way to distribute configurable, re-usable libraries that can be used by different, loosely connected or unaffiliated organizations (e.g., by distributing/installing 3rd party libraries).\n**Tagged:** Definition, Nest Modules\n\n7. For sharing code within closely organized groups (e.g., within company/project boundaries), it can be useful to have a more lightweight approach to sharing components. Monorepos have arisen as a construct to enable that, and within a monorepo, a library provides a way to share code in an easy, lightweight fashion. In a Nest monorepo, using libraries enables easy assembly of applications that share components. In fact, this encourages decomposition of monolithic applications and development processes to focus on building and composing modular components.\n**Tagged:** Definition, Monorepos\n\n8. Nest libraries\n**Tagged:** Chapter, NestJS\n\n9. A Nest library is a Nest project that differs from an application in that it cannot run on its own. A library must be imported into a containing application in order for its code to execute. The built-in support for libraries described in this section is only available for monorepos (standard mode projects can achieve similar functionality using npm packages).\n**Tagged:** Definition, Nest Libraries\n\n10. For example, an organization may develop an AuthModule that manages authentication by implementing company policies that govern all internal applications. Rather than build that module separately for each application, or physically packaging the code with npm and requiring each project to install it, a monorepo can define this module as a library. When organized this way, all consumers of the library module can see an up-to-date version of the AuthModule as it is committed. This can have significant benefits for coordinating component development and assembly, and simplifying end-to-end testing.\n**Tagged:** Example, Monorepos\n\n11. Creating libraries\n**Tagged:** Chapter, NestJS\n\n**Note:** The tags are manually assigned based on the content of each text snippet."
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "queue_time": 0.0004891560000000045,
+                "prompt_tokens": 515,
+                "prompt_time": 0.064211484,
+                "completion_tokens": 657,
+                "completion_time": 0.5475,
+                "total_tokens": 1172,
+                "total_time": 0.611711484
+            },
+            "system_fingerprint": "fp_a97cfe35ae",
+            "x_groq": {
+                "id": "req_01jdf8ww5eeyd8v6k2gz7fg3qt"
+            }
+        }
+    },
+    {
+        "batch_number": 5,
+        "classification": {
+            "id": "chatcmpl-1c9c8dcb-fcb7-4a15-9874-7d93fa1be118",
+            "object": "chat.completion",
+            "created": 1732458214,
+            "model": "llama3-8b-8192",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "Here is the formatted data in a suitable format for training a text classification model:\n\n**Text**: Any functionality that is suitable for re-use is a candidate for being managed as a library. Deciding what should be a library, and what should be part of an application, is an architectural design decision. Creating libraries involves more than simply copying code from an existing application to a new library. When packaged as a library, the library code must be decoupled from the application. This may require more time up front and force some design decisions that you may not face with more tightly coupled code. But this additional effort can pay off when the library can be used to enable more rapid application assembly across multiple applications.\n\n**Label**: Technical Documentation (or similar categories such as \"Library Development\", \"Software Architecture\", etc.)\n\n**Features**:\n\n1. Functionality suitable for re-use\n2. Architectural design decision\n3. Library creation process\n4. Decoupling library code from application\n5. Time and effort required\n6. Library usage in multiple applications\n\n**Notes**: Since the text is a passage from a technical documentation, the features are extracted to represent the content, focusing on technical concepts, keywords, and phrases.\n\n**Preprocessing**:\n\n* Tokenization: The text is broken down into individual words or tokens.\n* Stopword removal: Common stop words like \"the\", \"and\", \"is\" are removed.\n* Lemmatization: Words are converted to their base or dictionary form (e.g., \"running\" becomes \"run\").\n* Named entity recognition: Extraction of specific entities like \"library\", \"application\", and \"monorepo\".\n* Part-of-speech tagging: Identification of parts of speech like nouns, verbs, and adjectives.\n\nThe preprocessed data can be used for text classification tasks like categorizing text as \"Technical Documentation\" or similar categories."
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "queue_time": 0.0016452299999999975,
+                "prompt_tokens": 329,
+                "prompt_time": 0.01485635,
+                "completion_tokens": 380,
+                "completion_time": 0.316666667,
+                "total_tokens": 709,
+                "total_time": 0.331523017
+            },
+            "system_fingerprint": "fp_179b0f92c9",
+            "x_groq": {
+                "id": "req_01jdf8wx32eyd9v41w512zpmhv"
+            }
+        }
+    },
+    {
+        "batch_number": 6,
+        "classification": {
+            "id": "chatcmpl-02aa3790-4e07-4e00-a187-f5b4df3126f8",
+            "object": "chat.completion",
+            "created": 1732458215,
+            "model": "llama3-8b-8192",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "Here is the formatted data in a training dataset format:\n\n**Text:** tsconfig.lib.json\n\n**Label:** Configuration file for a library\n\n**Features:**\n\n1. **File naming:** tsconfig.lib.json\n2. **Content:** The NEST CLI configuration for a library\n3. **Entry:** The `my-library` library configuration\n4. **Type:** Library\n5. **Root:** `libs/my-library`\n6. **Entry File:** `index`\n7. **Source Root:** `libs/my-library/src`\n8. **Compiler Options:**\n\t* `tsConfigPath`: `libs/my-library/tsconfig.lib.json`\n\n**Label:** Library configuration for NEST CLI\n\nThis formatted data can be used to train a machine learning model to classify text as either a library configuration file or a different type of file."
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "queue_time": 0.0006842050000000002,
+                "prompt_tokens": 144,
+                "prompt_time": 0.018282334,
+                "completion_tokens": 170,
+                "completion_time": 0.141666667,
+                "total_tokens": 314,
+                "total_time": 0.159949001
+            },
+            "system_fingerprint": "fp_6a6771ae9c",
+            "x_groq": {
+                "id": "req_01jdf8wxpke33sm9f08ghpxatf"
+            }
+        }
+    },
+    {
+        "batch_number": 7,
+        "classification": {
+            "id": "chatcmpl-f2309d84-69a0-4c4f-be4e-db9f11242eca",
+            "object": "chat.completion",
+            "created": 1732458215,
+            "model": "llama3-8b-8192",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "Here is the formatted data for training:\n\n**Data Sample:**\n\n| Text | Category | Labels |\n| --- | --- | --- |\n| the \"type\" property is set to \"library\" instead of \"application\" | Type | library |\n| the \"entryFile\" property is set to \"index\" instead of \"main\" | Entry file | index |\n| These differences key the build process to handle libraries appropriately. | Build process | library |\n| For example, a library exports its functions through the index.js file. | Export functions | library |\n| As with application-type projects, libraries each have their own tsconfig.lib.json file that extends the root (monorepo-wide) tsconfig.json file. | Configuration files | library |\n| You can modify this file, if necessary, to provide library-specific compiler options. | Compiler options | library |\n| You can build the library with the CLI command: | Build command | library |\n| $ nest build my-library | Build command example | library |\n| Using libraries | Concept | using |\n| With the automatically generated configuration files in place, using libraries is straightforward. | Usage | straightforward |\n| How would we import MyLibraryService from the my-library library into the my-project application? | Import | my-library |\n| First, note that using library modules is the same as using any other Nest module. | Note | library |\n| What the monorepo does is manage paths in a way that importing libraries and generating builds is now transparent. | Monorepo | transparent |\n| To use MyLibraryService, we need to import its declaring module. | Use | my-library |\n| We can modify my-project/src/app.module.ts as follows to import MyLibraryModule. | Code snippet | my-library |\n\n**Categories:**\n\n1. Type\n2. Entry file\n3. Build process\n4. Export functions\n5. Configuration files\n6. Compiler options\n7. Build command\n8. Concept\n9. Usage\n10. Import\n11. Note\n12. Monorepo\n13. Use\n14. Code snippet\n\n**Labels:**\n\n* library\n* application\n* index\n* main\n* my-library\n* my-project\n* nested\n* monorepo-wide\n* tsconfig.lib.json\n* tsconfig.json\n* npm\n* yarn"
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "queue_time": 0.00027868899999999863,
+                "prompt_tokens": 324,
+                "prompt_time": 0.039577991,
+                "completion_tokens": 474,
+                "completion_time": 0.395,
+                "total_tokens": 798,
+                "total_time": 0.434577991
+            },
+            "system_fingerprint": "fp_a97cfe35ae",
+            "x_groq": {
+                "id": "req_01jdf8wy5heyda1d3waqh30hfw"
+            }
+        }
+    },
+    {
+        "batch_number": 8,
+        "classification": {
+            "id": "chatcmpl-cf3e7009-1290-43bb-ae50-f8cfb604da94",
+            "object": "chat.completion",
+            "created": 1732458216,
+            "model": "llama3-8b-8192",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "To format the given text into a training dataset, I'll break it down into individual sentences or sentences groups, and provide a classification label for each. Here's the formatted data:\n\n**Training Dataset:**\n\n1. `Sentence`: \"Notice above that we've used a path alias of @app in the ES module import line, which was the prefix we supplied with the Nest g library command above.\"\n`Classification Label`: `TECHNICAL`\n2. `Sentence`: \"Under the covers, Nest handles this through tsconfig path mapping.\"\n`Classification Label`: `TECHNICAL`\n3. `Sentence`: \"When adding a library, Nest updates the global (monorepo) tsconfig.json file's \"paths\" key like this:\"\n`Classification Label`: `TECHNICAL`\n4. `Sentence`: \"So, in a nutshell, the combination of the monorepo and library features has made it easy and intuitive to include library modules into applications.\"\n`Classification Label`: `EXPLANATORY`\n5. `Sentence`: \"This same mechanism enables building and deploying applications that compose libraries.\"\n`Classification Label`: `TECHNICAL`\n6. `Sentence`: \"Once you've imported the MyLibraryModule, running nest build handles all the module resolution automatically and bundles the app along with any library dependencies, for deployment.\"\n`Classification Label`: `TECHNICAL`\n7. `Sentence`: \"The default compiler for a monorepo is webpack, so the resulting distribution file is a single file that bundles all of the transpiled JavaScript files into a single file.\"\n`Classification Label`: `TECHNICAL`\n8. `Sentence`: \"You can also switch to tsc as described here.\"\n`Classification Label`: `HINT`\n9. `Sentence`: \"Overview\"\n`Classification Label`: `HEADER`\n10. `Sentence`: \"The Nest CLI is a command-line interface tool that helps you to initialize, develop, and maintain your Nest applications.\"\n`Classification Label`: `TECHNICAL`\n11. `Sentence`: \"It assists in multiple ways, including scaffolding the project, serving it in development mode, and building and bundling the application for production distribution.\"\n`Classification Label`: `TECHNICAL`\n12. `Sentence`: \"It embodies best-practice architectural patterns to encourage well-structured apps.\"\n`Classification Label`: `EXPLANATORY`\n13. `Sentence`: \"Installation\"\n`Classification Label`: `HEADER`\n\n**Classification Labels:**\n\n* `TECHNICAL`: Sentences that discuss specific technical details, such as configuration, modules, and compilation.\n* `EXPLANATORY`: Sentences that provide context or explanation for technical concepts.\n* `HINT`: Sentences that provide additional information or tips for using a particular tool or feature.\n* `HEADER`: Sentences that serve as section headings.\n\nNote that these classification labels are not mutually exclusive, and some sentences may belong to multiple categories."
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "queue_time": 0.0015879029999999981,
+                "prompt_tokens": 349,
+                "prompt_time": 0.015806864,
+                "completion_tokens": 598,
+                "completion_time": 0.498333333,
+                "total_tokens": 947,
+                "total_time": 0.514140197
+            },
+            "system_fingerprint": "fp_179b0f92c9",
+            "x_groq": {
+                "id": "req_01jdf8wyygfaw88c0ve1pz1vn0"
+            }
+        }
+    },
+    {
+        "batch_number": 9,
+        "classification": {
+            "id": "chatcmpl-c0de0e25-691b-43ca-9347-e57fd044c099",
+            "object": "chat.completion",
+            "created": 1732458217,
+            "model": "llama3-8b-8192",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "Here is the formatted text data in a format suitable for training a machine learning model:\n\n**Text**: A sample from the given text\n**Label**: Classify the text as either \"installation\" or \"basic workflow\"\n\n**Data:**\n\n1. **Text**: \"With npm, you have several options available for managing how your OS command line resolves the location of the nest CLI binary file.\"\n**Label**: \"installation\"\n\n2. **Text**: \"Install the CLI globally using the npm install -g command (see the Note above for details about global installs).\"\n**Label**: \"installation\"\n\n3. **Text**: \"info Hint Alternatively, you can use this command npx @nestjs/cli@latest without installing the cli globally.\"\n**Label**: \"installation\"\n\n4. **Text**: \"Once installed, you can invoke CLI commands directly from your OS command line through the nest executable.\"\n**Label**: \"basic workflow\"\n\n5. **Text**: \"Get help on an individual command using the following construct.\"\n**Label**: \"basic workflow\"\n\n6. **Text**: \"To create, build and run a new basic Nest project in development mode, go to the folder that should be the parent of your new project, and run the following commands.\"\n**Label**: \"basic workflow\"\n\n7. **Text**: \"In your browser, open http://localhost:3000 to see the new application running.\"\n**Label**: \"basic workflow\"\n\nNote that the text data is separated into two categories: \"installation\" and \"basic workflow\". The \"installation\" category includes text related to installing the Nest CLI, while the \"basic workflow\" category includes text related to using the CLI for tasks such as creating and running a new project."
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "queue_time": 0.0034447670000000014,
+                "prompt_tokens": 453,
+                "prompt_time": 0.071439672,
+                "completion_tokens": 348,
+                "completion_time": 0.29,
+                "total_tokens": 801,
+                "total_time": 0.361439672
+            },
+            "system_fingerprint": "fp_6a6771ae9c",
+            "x_groq": {
+                "id": "req_01jdf8wzspeydvv62a1nvn2nph"
+            }
+        }
+    },
+    {
+        "batch_number": 10,
+        "classification": {
+            "id": "chatcmpl-7a5a001a-fdbf-4a53-932c-eb49e8b76f69",
+            "object": "chat.completion",
+            "created": 1732458218,
+            "model": "llama3-8b-8192",
+            "choices": [
+                {
+                    "index": 0,
+                    "message": {
+                        "role": "assistant",
+                        "content": "Here is the formatted data in a training dataset format:\n\n**Text Classification Task:**\n\n* Task: Text Classification\n* Dataset: NestJS Documentation\n* Type: Text Classification\n* Target Variable: Label (Standard Mode, Monorepo Mode)\n* Input Features: Text Data (NestedJS Documentation)\n\n**Data Records (Preprocessed):**\n\n1. {\n    \"text\": \"info Hint We recommend using the SWC builder for faster builds (10x more performant than the default TypeScript compiler).\",\n    \"label\": \"Standard Mode\"\n}\n\n2. {\n    \"text\": \"Project structure When you run nest new, Nest generates a boilerplate application structure by creating a new folder and populating an initial set of files. You can continue working in this default structure, adding new components, as described throughout this documentation.\",\n    \"label\": \"Standard Mode\"\n}\n\n3. {\n    \"text\": \"Nest also supports an alternate structure for managing multiple projects and libraries called monorepo mode.\",\n    \"label\": \"Monorepo Mode\"\n}\n\n4. {\n    \"text\": \"Aside from a few specific considerations around how the build process works (essentially, monorepo mode simplifies build complexities that can sometimes arise from monorepo-style project structures), and built-in library support, the rest of the Nest features, and this documentation, apply equally to both standard and monorepo mode project structures.\",\n    \"label\": \"Monorepo Mode\"\n}\n\n5. {\n    \"text\": \"You can use either mode to manage multiple projects.\",\n    \"label\": \"Both\"\n}\n\n6. {\n    \"text\": \"Here's a quick summary of the differences:\",\n    \"label\": \"Both\"\n}\n\n7. {\n    \"text\": \"| Feature                                               | Standard Mode                                                      | Monorepo Mode                                              |\",\n    \"label\": \"Both\"\n}\n\n8. {\n    \"text\": \"All nest commands follow the same format:\",\n    \"label\": \"Both\"\n}\n\n**Data Transformation:**\n\n* Tokenization: Segment the text into individual words or tokens.\n* Stopword Removal: Remove common stopwords like \"the\", \"and\", etc.\n* Stemming/Lemmatization: Reduce words to their base form (e.g., \"running\" to \"run\").\n* Vectorization: Convert text data to numerical vectors using techniques like bag-of-words or TF-IDF.\n\nThis dataset can be used to train a machine learning model to classify text as either \"Standard Mode\" or \"Monorepo Mode\" based on the characteristics of the text."
+                    },
+                    "logprobs": null,
+                    "finish_reason": "stop"
+                }
+            ],
+            "usage": {
+                "queue_time": 0.0014688849999999996,
+                "prompt_tokens": 483,
+                "prompt_time": 0.027275734,
+                "completion_tokens": 522,
+                "completion_time": 0.435,
+                "total_tokens": 1005,
+                "total_time": 0.462275734
+            },
+            "system_fingerprint": "fp_179b0f92c9",
+            "x_groq": {
+                "id": "req_01jdf8x0gve33t928e06qwpgkj"
+            }
+        }
+    }
+]
+
+// 2024-11-24 20:05:32
